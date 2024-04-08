@@ -8,14 +8,14 @@ using WebFormNovice1.Models;
 
 namespace WebFormNovice1
 {
-    public partial class Contact : BasePage
+    public partial class Register : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSend_Click(object sender, EventArgs e)
+        protected void btnRegister_Click(object sender, EventArgs e)
         {
             if (Validation(out List<string> msg))
             {
@@ -23,18 +23,18 @@ namespace WebFormNovice1
                 {
                     using (var db = new DBModel())
                     {
-                        db.Contacts.Add(new Models.Contact
+                        db.Users.Add(new User
                         {
                             UserName = HttpUtility.HtmlEncode(txtUserName.Text),
                             Email = HttpUtility.HtmlEncode(txtEmail.Text),
-                            Message = HttpUtility.HtmlEncode(txtMsg.Text)
+                            Password = HttpUtility.HtmlEncode(txtPassword.Text)
                         });
                         db.SaveChanges();
                     }
                 }
                 catch (Exception ex)
                 {
-                    Alert($"Save Contact Data Error：{ex.Message}");
+                    Alert($"Save User Data Error：{ex.Message}");
                 }
             }
             else
@@ -55,13 +55,13 @@ namespace WebFormNovice1
             {
                 msg.Add("Pleass Write Email!!");
             }
-            if (string.IsNullOrEmpty(txtMsg.Text))
+            if (string.IsNullOrEmpty(txtPassword.Text))
             {
-                msg.Add("Pleass Write User Name !!");
+                msg.Add("Pleass Write Password !!");
             }
-            if (!msg.Any()) 
-            { 
-                result = true; 
+            if (!msg.Any())
+            {
+                result = true;
             }
             return result;
         }

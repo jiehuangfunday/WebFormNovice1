@@ -1,19 +1,17 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebFormNovice1.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <main aria-labelledby="title">
-        <h2 id="title"><%: Title %>.</h2>
-        <h3>Your contact page.</h3>
-        <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
-        </address>
-
-        <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-        </address>
-    </main>
+    <div class="col-3">
+        <label for="<%= txtUserName.ClientID %>" class="form-label">User Name</label>
+        <asp:TextBox runat="server" ID="txtUserName" CssClass="form-control"></asp:TextBox>
+    </div>
+    <div class="col-3">
+        <label for="<%= txtEmail.ClientID %>" class="form-label">Email</label>
+        <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" TextMode="Email"></asp:TextBox>
+    </div>
+    <div class="col-3">
+        <label for="<%= txtMsg.ClientID %>" class="form-label">Message</label>
+        <asp:TextBox runat="server" ID="txtMsg" CssClass="form-control"></asp:TextBox>
+    </div>
+    <asp:Button runat="server" ID="btnSend" CssClass="btn btn-primary" Text="Submit" OnClick="btnSend_Click" />
 </asp:Content>

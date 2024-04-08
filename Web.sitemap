@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="default.aspx" title="Home"  description="首頁">
+	  <siteMapNode url="about.aspx" title="About"  description="關於" />
+	  <siteMapNode url="contact.aspx" title="Contact Us"  description="內容" />
+	  <siteMapNode url="feedback.aspx" title="Feedback"  description="回饋單" />
+	  <siteMapNode url="uploadimage.aspx" title="Upload Image"  description="上傳圖片" />
+	  <siteMapNode url="dropdownlist.aspx" title="Dropdownlist"  description="下拉選單" />
+	  <siteMapNode url="register.aspx" title="Register"  description="註冊" />
+	  <siteMapNode url="gridviewcontrol.aspx" title="Gridview Control"  description="GridView控制" />
+	  <siteMapNode url="currentdatetime.aspx" title="Current Datetime"  description="顯示目前時間" />
+	  <siteMapNode url="cssstyle.aspx" title="Css Style"  description="Css套用" />
+	  <siteMapNode url="products.aspx" title="Products"  description="產品" />
+  </siteMapNode>
+</siteMap>

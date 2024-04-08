@@ -11,7 +11,7 @@ namespace WebFormNovice1
 {
 
 
-    public partial class Contact
+    public partial class Register
     {
 
         /// <summary>
@@ -24,6 +24,15 @@ namespace WebFormNovice1
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
 
         /// <summary>
+        /// txtPassword 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+
+        /// <summary>
         /// txtEmail 控制項。
         /// </summary>
         /// <remarks>
@@ -33,21 +42,12 @@ namespace WebFormNovice1
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// txtMsg 控制項。
+        /// btnRegister 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMsg;
-
-        /// <summary>
-        /// btnSend 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSend;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
     }
 }
